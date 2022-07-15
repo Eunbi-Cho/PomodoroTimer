@@ -23,16 +23,16 @@
                                     <constraint firstAttribute="height" constant="120" id="yZu-YD-Qkq"/>
                                 </constraints>
                             </imageView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-fz-das">
+                                <rect key="frame" x="48" y="451.5" width="318" height="4"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </progressView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-AD-7l5">
                                 <rect key="frame" x="72.5" y="364" width="269.5" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-fz-das">
-                                <rect key="frame" x="48" y="451.5" width="318" height="4"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                            </progressView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIS-dF-NGF">
                                 <rect key="frame" x="0.0" y="294" width="414" height="216"/>
                             </datePicker>
@@ -41,15 +41,21 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwC-LI-iOp">
                                         <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
-                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" cornerStyle="capsule"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Cancel" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="tabCancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSk-LU-rTM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5Y-pu-UXd">
                                         <rect key="frame" x="203" y="0.0" width="163" height="60"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="capsule"/>
+                                        <connections>
+                                            <action selector="tabToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTW-xb-9Eu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" systemColor="systemRedColor"/>
@@ -78,6 +84,13 @@
                             <constraint firstItem="WSd-fz-das" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="xlb-7T-lUz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="GwC-LI-iOp" id="7LG-9p-Vpb"/>
+                        <outlet property="datePicker" destination="hIS-dF-NGF" id="eH8-Jb-iMM"/>
+                        <outlet property="progressView" destination="WSd-fz-das" id="4oM-bh-EqQ"/>
+                        <outlet property="timerLabel" destination="Cbj-AD-7l5" id="Y3R-gH-fHC"/>
+                        <outlet property="toggleButton" destination="D5Y-pu-UXd" id="DBG-q8-QDk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
