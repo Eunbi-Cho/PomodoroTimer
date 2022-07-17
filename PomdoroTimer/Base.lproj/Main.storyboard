@@ -23,11 +23,11 @@
                                     <constraint firstAttribute="height" constant="120" id="yZu-YD-Qkq"/>
                                 </constraints>
                             </imageView>
-                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-fz-das">
+                            <progressView opaque="NO" alpha="0.0" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-fz-das">
                                 <rect key="frame" x="48" y="451.5" width="318" height="4"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                             </progressView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-AD-7l5">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbj-AD-7l5">
                                 <rect key="frame" x="72.5" y="364" width="269.5" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="48"/>
                                 <nil key="textColor"/>
@@ -87,6 +87,7 @@
                     <connections>
                         <outlet property="cancelButton" destination="GwC-LI-iOp" id="7LG-9p-Vpb"/>
                         <outlet property="datePicker" destination="hIS-dF-NGF" id="eH8-Jb-iMM"/>
+                        <outlet property="imageView" destination="kNh-Zp-WI1" id="BtW-kA-ggc"/>
                         <outlet property="progressView" destination="WSd-fz-das" id="4oM-bh-EqQ"/>
                         <outlet property="timerLabel" destination="Cbj-AD-7l5" id="Y3R-gH-fHC"/>
                         <outlet property="toggleButton" destination="D5Y-pu-UXd" id="DBG-q8-QDk"/>
